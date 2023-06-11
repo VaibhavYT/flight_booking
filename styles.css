@@ -208,7 +208,7 @@ body.active {
   text-transform: uppercase;
   font-weight: var(--fw-700);
   letter-spacing: 1px;
-  padding: 20px 60px;
+  padding: 20px 55px;
   max-width: max-content;
   border-radius: var(--radius-pill);
   transition: var(--transition-1);
@@ -272,7 +272,11 @@ body.active {
 }
 
 
-
+.has-bg-image{
+  background-repeat: no-repeat;
+  background-position: 20%;
+  background-size: cover;
+}
 
 /*-----------------------------------*\
   #HEADER
@@ -696,6 +700,42 @@ body.active {
 /*-----------------------------------*\
   #OFFER
 \*-----------------------------------*/
+
+
+.offer-content{
+  background-color: var(--satin-sheen-gold);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-inline: 15px;
+}
+
+.offer:is(.section-subtitle,.section-text){
+  color: var(--medium-champagne);
+}
+
+.offer .section-text{
+  margin-block: 30px 40px;
+}
+
+.offer .btn {
+  background-color: var(--phthalo-green-2);
+}
+
+  
+.offer .btn:is(:hover,:focus){
+  background-color: var(--white);
+  color: var(--phthalo-green-2);
+}
+
+
+.offer-banner{
+  height: 500px;
+  background-color: var(--light-gray);
+}
+
+
+
+
 
 
 
