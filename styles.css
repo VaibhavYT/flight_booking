@@ -272,11 +272,15 @@ body.active {
 }
 
 
-.has-bg-image{
+.has-bg-image {
   background-repeat: no-repeat;
   background-position: 20%;
   background-size: cover;
 }
+.w-100{
+  width: 100%;
+}
+
 
 /*-----------------------------------*\
   #HEADER
@@ -625,11 +629,11 @@ body.active {
 }
 
 .feature .btn-secondary:is(:hover, :focus) {
-    background-color: var(--phthalo-green-2);
+  background-color: var(--phthalo-green-2);
 }
 
 
-.feature-card{
+.feature-card {
   padding: 50px;
   display: flex;
   flex-direction: column-reverse;
@@ -640,33 +644,33 @@ body.active {
   transition: var(--transition-2);
 }
 
-.feature-card:is(:hover,:focus-within){
+.feature-card:is(:hover, :focus-within) {
   background-size: 105%;
 }
 
 
 .feature-card::before,
-.feature-card::after{
+.feature-card::after {
   position: absolute;
   inset: 0;
 }
 
-.feature-card::before{
-  background-image:var(--gradient-1) ;
+.feature-card::before {
+  background-image: var(--gradient-1);
 }
 
-.feature-card::after{
+.feature-card::after {
   background-color: var(--phthalo-green_30);
   transform: scaleY(0);
   transform-origin: top;
   transition: var(--transition-2);
 }
 
-.feature-card:is(:hover,:focus-within)::after{
+.feature-card:is(:hover, :focus-within)::after {
   transform: scaleY(1);
 }
 
-.feature-card .card-title{
+.feature-card .card-title {
   color: var(--white);
   font-size: var(--fs-3);
   line-height: 1.2;
@@ -674,11 +678,11 @@ body.active {
 }
 
 
-.feature-card .card-title:is(:hover,:focus){
+.feature-card .card-title:is(:hover, :focus) {
   color: var(--satin-sheen-gold);
 }
 
-.feature-card .card-btn{
+.feature-card .card-btn {
   background-color: var(--white);
   color: var(--phthalo-green-2);
   max-width: max-content;
@@ -689,7 +693,7 @@ body.active {
 }
 
 
-.feature-card .card-btn:is(:hover,:focus){
+.feature-card .card-btn:is(:hover, :focus) {
   background-color: var(--satin-sheen-gold);
   color: var(--white);
 }
@@ -702,18 +706,18 @@ body.active {
 \*-----------------------------------*/
 
 
-.offer-content{
+.offer-content {
   background-color: var(--satin-sheen-gold);
   background-repeat: no-repeat;
   background-position: bottom;
   padding-inline: 15px;
 }
 
-.offer:is(.section-subtitle,.section-text){
+.offer:is(.section-subtitle, .section-text) {
   color: var(--medium-champagne);
 }
 
-.offer .section-text{
+.offer .section-text {
   margin-block: 30px 40px;
 }
 
@@ -721,37 +725,124 @@ body.active {
   background-color: var(--phthalo-green-2);
 }
 
-  
-.offer .btn:is(:hover,:focus){
+
+.offer .btn:is(:hover, :focus) {
   background-color: var(--white);
   color: var(--phthalo-green-2);
 }
 
 
-.offer-banner{
+.offer-banner {
   height: 500px;
   background-color: var(--light-gray);
 }
-
-
-
-
-
-
-
-
 
 /*-----------------------------------*\
   #FLIGHTS
 \*-----------------------------------*/
 
 
+.flight .section-text {
+  line-height: 1.85;
+  margin-block: 30px 20px;
+}
+
+.flight-card {
+  --color: var(--phthalo-green-2);
+  background-color: var(--phthalo-green-3);
+  border: 1px solid var(--color);
+  padding-block-end: 40px;
+  text-align: center;
+  transition: var(--transition-1);
+}
+
+.flight-card:is(:hover,:focus-within){
+  --color: var(--satin-sheen-gold); 
+}
+
+.flight-card:is(.card-title,.card-item){
+  display: flex;
+  align-items: center;
+}
 
 
+.flight-card .card-title{
+  background-color: var(--color);
+  color: var(--white);
+  font-size: var(--fs-6);
+  justify-content: space-between;
+  padding: 15px 30px;
+  margin-block-end: 20px;
+  transition: var(--transition-1);
+}
+
+
+
+.flight-card .w-100{
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.flight-card .card-list{margin-block: 20px;}
+
+
+.flight-card .card-item{
+  justify-content: center;
+  gap: 5px;
+  margin-block-end:8px;
+}
+
+.flight-card .card-item .span{
+  color: var(--white);
+  font-weight: var(--fw-600);
+}
+
+.flight-card .btn{
+  margin-inline: auto;
+}
 
 /*-----------------------------------*\
-  #NEWLETTER
+  #NEWSLETTER
 \*-----------------------------------*/
+
+.newsletter{
+  background-color: var(--satin-sheen-gold);
+  background-size: auto;
+  background-position: left bottom;
+}
+
+
+.newsletter .container{
+  display: grid;
+  gap:40px
+}
+
+.newsletter .section-subtitle{
+  color: var(--medium-champagne);
+}
+
+
+
+.newsletter .input-field{
+  background-color: var(--white);
+  padding: 23px;
+  padding-inline-start: 48px;
+  border-radius: var(--radius-pill);
+  outline: none;
+  margin-block-end: 20px;
+}
+
+.newsletter .btn{
+  background-color: var(--phthalo-green-2);
+  color: var(--white);
+  padding-block: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
 
 
 
