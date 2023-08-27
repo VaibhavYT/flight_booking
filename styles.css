@@ -2,9 +2,11 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
+
+/* 
+  Copyright 2023 VaibhavJaiswal
+  */
+
 
 
 
@@ -277,7 +279,8 @@ body.active {
   background-position: 20%;
   background-size: cover;
 }
-.w-100{
+
+.w-100 {
   width: 100%;
 }
 
@@ -756,17 +759,17 @@ body.active {
   transition: var(--transition-1);
 }
 
-.flight-card:is(:hover,:focus-within){
-  --color: var(--satin-sheen-gold); 
+.flight-card:is(:hover, :focus-within) {
+  --color: var(--satin-sheen-gold);
 }
 
-.flight-card:is(.card-title,.card-item){
+.flight-card:is(.card-title, .card-item) {
   display: flex;
   align-items: center;
 }
 
 
-.flight-card .card-title{
+.flight-card .card-title {
   background-color: var(--color);
   color: var(--white);
   font-size: var(--fs-6);
@@ -778,26 +781,28 @@ body.active {
 
 
 
-.flight-card .w-100{
+.flight-card .w-100 {
   max-width: max-content;
   margin-inline: auto;
 }
 
-.flight-card .card-list{margin-block: 20px;}
-
-
-.flight-card .card-item{
-  justify-content: center;
-  gap: 5px;
-  margin-block-end:8px;
+.flight-card .card-list {
+  margin-block: 20px;
 }
 
-.flight-card .card-item .span{
+
+.flight-card .card-item {
+  justify-content: center;
+  gap: 5px;
+  margin-block-end: 8px;
+}
+
+.flight-card .card-item .span {
   color: var(--white);
   font-weight: var(--fw-600);
 }
 
-.flight-card .btn{
+.flight-card .btn {
   margin-inline: auto;
 }
 
@@ -805,25 +810,25 @@ body.active {
   #NEWSLETTER
 \*-----------------------------------*/
 
-.newsletter{
+.newsletter {
   background-color: var(--satin-sheen-gold);
   background-size: auto;
   background-position: left bottom;
 }
 
 
-.newsletter .container{
+.newsletter .container {
   display: grid;
-  gap:40px
+  gap: 40px
 }
 
-.newsletter .section-subtitle{
+.newsletter .section-subtitle {
   color: var(--medium-champagne);
 }
 
 
 
-.newsletter .input-field{
+.newsletter .input-field {
   background-color: var(--white);
   padding: 23px;
   padding-inline-start: 48px;
@@ -832,7 +837,7 @@ body.active {
   margin-block-end: 20px;
 }
 
-.newsletter .btn{
+.newsletter .btn {
   background-color: var(--phthalo-green-2);
   color: var(--white);
   padding-block: 15px;
@@ -841,29 +846,557 @@ body.active {
   gap: 10px;
 }
 
-
-
-
-
-
-
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  background-color: var(--phthalo-green-2);
+  background-repeat: no-repeat;
+  background-position: center 85%;
+}
+
+.footer-top {
+  --section-padding: 90px;
+}
 
 
+.footer-text,
+.footer-list-title {
+  color: var(--white);
+}
 
+.footer-text {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  margin-block-start: 20px;
+}
+
+
+.footer-list-title {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-700);
+  margin-block-end: 15px;
+}
+
+.footer-link {
+  margin-block-start: 5px;
+  transition: var(--transition-1);
+}
+
+
+.footer-link:is(:hover, :focus) {
+  color: var(--white);
+}
+
+.footer-list-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-block-start: 12px;
+}
+
+.footer-list-item ion-icon {
+  flex-shrink: 0;
+  color: var(--satin-sheen-gold);
+}
+
+.footer-list-item .footer-link {
+  margin-block-start: 0;
+}
+
+.footer-list-item:is(.footer-link, .address) {
+  font-size: var(--fs-7);
+}
+
+.footer-list-item .footer-link:is(:hover, :focus) {
+  color: var(--satin-sheen-gold);
+}
+
+.footer-bottom {
+  border-block-start: 1px solid var(--white_10);
+  padding-block: 30px;
+  text-align: center;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-block-start: 15px;
+}
+
+.social-link {
+  background-color: var(--british-racing-green);
+  color: var(--white);
+  padding: 12px;
+  border-radius: var(--radius-circle);
+  transition: var(--transition-1);
+}
+
+
+.social-link:is(:hover, :focus) {
+  background-color: var(--white);
+  color: var(--satin-sheen-gold);
+}
 
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
 
+.back-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: var(--satin-sheen-gold);
+  color: var(--white);
+  font-size: 20px;
+  padding: 15px;
+  border-radius: var(--radius-circle);
+  box-shadow: var(--shadow);
+  transition: var(--transition-1);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+}
 
-
-
+.back-top-btn.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+
+
+/**
+ * responsive for large than 575px screen
+ */
+
+@media (min-width: 575px) {
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header .container {
+    max-width: unset;
+  }
+
+}
+
+
+
+
+
+/**
+ * responsive for large than 768px screen
+ */
+
+@media (min-width: 768px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-1: 10rem;
+    --fs-2: 5rem;
+    --fs-4: 3rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 720px;
+  }
+
+  .h1 {
+    line-height: 0.9;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :is(.feature, .flight) .grid-list li:first-child {
+    grid-column: 1 / 3;
+  }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .header-action-btn:not(.nav-open-btn) {
+    display: block;
+    color: var(--white);
+  }
+
+  .header-action {
+    display: flex;
+    gap: 15px;
+  }
+
+
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    padding-block-start: 224px;
+  }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    max-width: 600px;
+  }
+
+
+
+  /**
+   * FEATURE
+   */
+
+  .feature-content {
+    padding: 50px;
+  }
+
+  .feature .section-title {
+    max-width: 11ch;
+  }
+
+
+
+  /**
+   * NEWSLETTER
+   */
+
+  .newsletter-form {
+    position: relative;
+  }
+
+  .newsletter .btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social-list {
+    margin-block-start: 0;
+  }
+
+}
+
+
+
+
+
+/**
+ * responsive for large than 992px screen
+ */
+
+@media (min-width: 992px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-4: 2.5rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 960px;
+  }
+
+
+
+  /**
+   * FEATURES
+   */
+
+  .feature .grid-list li:first-child {
+    grid-column: auto;
+  }
+
+  .feature .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-content {
+    padding: 20px;
+  }
+
+  .feature .section-title {
+    max-width: unset;
+  }
+
+  .feature-card {
+    aspect-ratio: unset;
+    height: 100%;
+  }
+
+
+
+  /**
+   * OFFER
+   */
+
+  .offer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .offer-banner {
+    height: unset;
+  }
+
+
+
+  /**
+   * FLIGHT
+   */
+
+  .flight-content {
+    max-width: 70%;
+  }
+
+  .flight-card .card-title {
+    padding-inline: 60px;
+  }
+
+
+
+  /**
+   * NEWSLETTER
+   */
+
+  .newsletter .container {
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+  }
+
+}
+
+
+
+
+
+/**
+ * responsive for large than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+
+    /**
+     * typography
+     */
+
+    --fs-4: 3rem;
+
+  }
+
+
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .h1 {
+    letter-spacing: 10px;
+  }
+
+  .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+
+  /**
+   * HEADER
+   */
+
+  .nav-open-btn,
+  .navbar-top,
+  .overlay {
+    display: none;
+  }
+
+  .navbar,
+  .navbar.active,
+  .navbar-list,
+  .navbar-item {
+    all: unset;
+  }
+
+  .navbar-list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .navbar-link {
+    --fs-8: 1.5rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    transition: var(--transition-1);
+  }
+
+  .navbar-link:is(:hover, :focus) {
+    color: var(--satin-sheen-gold);
+  }
+
+
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-banner {
+    margin-inline: 50px;
+  }
+
+
+
+  /**
+   * FEATURE
+   */
+
+  .feature-content {
+    padding: 50px;
+  }
+
+  .feature .section-title {
+    max-width: 11ch;
+  }
+
+  .feature-card {
+    background-size: 105%;
+  }
+
+  .feature-card:is(:hover, :focus-within) {
+    background-size: 110%;
+  }
+
+
+
+  /**
+   * OFFER
+   */
+
+  .offer-content {
+    padding-inline-end: 100px;
+  }
+
+  .offer-content .container {
+    max-width: 500px;
+    margin-inline: auto 0;
+  }
+
+
+
+  /**
+   * FLIGHT
+   */
+
+  .flight .grid-list li:first-child {
+    grid-column: auto;
+  }
+
+  .flight .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flight-content {
+    max-width: unset;
+  }
+
+
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top {
+    grid-template-columns: 1fr 0.4fr 0.4fr 0.6fr;
+  }
+
+  .footer-text {
+    margin-inline-end: 80px;
+  }
+
+}
